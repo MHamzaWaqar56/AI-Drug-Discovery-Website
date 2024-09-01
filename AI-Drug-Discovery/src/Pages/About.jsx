@@ -20,7 +20,7 @@ const About = () => {
       </div>
       <div className="w-full flex">
         <div
-          className="w-1/2 p-2 flex justify-center"
+          className="w-1/2 about-para p-2 flex justify-center"
           style={{
             animation: "slideInLeft 2s ease-out forwards",
           }}
@@ -37,7 +37,7 @@ const About = () => {
           </p>
         </div>
         <div
-          className="w-1/2 p-2 flex justify-center"
+          className="about-img w-1/2 p-2 flex justify-center"
           style={{
             animation: "slideInRight 2s ease-out forwards",
           }}
@@ -85,6 +85,18 @@ const About = () => {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+@media only screen and (min-width: 320px) and (max-width : 850px){
+
+.about-img{
+display: none;
+}
+
+.about-para{
+width: 100%;
+}
+
 }
 
 

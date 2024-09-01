@@ -10,11 +10,11 @@ const Contact = () => {
       <Navbar />
       <div className="w-full">
         <div
-          className="w-full bg-[#dfdfdf3b] px-[24%] py-[30px]"
+          className="w-full contact1-div bg-[#dfdfdf3b] px-[24%] py-[30px]"
           style={{ animation: "fadeIn 2s ease-out forwards" }}
         >
           <h2
-            className="text-left text-[24px] mb-[25px] mt-0 p-0 font-[800]"
+            className="text-left contact1-h2 text-[24px] mb-[25px] mt-0 p-0 font-[800]"
             style={{
               animation: "slideInLeft 2s ease-out forwards",
             }}
@@ -22,7 +22,7 @@ const Contact = () => {
             Press Enquiries
           </h2>
           <p
-            className="text-left mb-[30px] text-[1rem]"
+            className="text-left contact1-p mb-[30px] text-[1rem]"
             style={{
               animation: "slideInRight 2s ease-out forwards",
             }}
@@ -38,14 +38,14 @@ const Contact = () => {
           </p>
         </div>
 
-        <div className="w-full px-[24%] py-[30px] flex flex-col">
+        <div className="w-full main-map px-[24%] py-[30px] flex flex-col">
           <div className="w-full">
             <h2 className="text-left text-[24px] mb-[25px] mt-0 p-0 font-[800]">
               Office Address
             </h2>
           </div>
-          <div className="w-full flex">
-            <div className="w-1/2">
+          <div className="w-full flex map-details">
+            <div className="w-1/2 address">
               <ul className=" mt-5 flex flex-col gap-3 text-left">
                 <li className="text-[12px] font-[400] text-left ">
                   <div className="flex gap-5 ">
@@ -63,9 +63,9 @@ const Contact = () => {
                   </div>
                 </li>
                 <li className="text-[12px] font-[400]">
-                  <div className="flex gap-5 ">
+                  <div className="flex gap-5 pb-[20px]">
                     <IoMail className="text-xl text-[#2575ed]" />
-                    <span className="hover:text-[#2525ed]">
+                    <span className=" hover:text-[#2525ed]">
                       <NavLink to="mailto:info@drugdiscovery.org">
                         info@drugdiscovery.org
                       </NavLink>
@@ -74,7 +74,7 @@ const Contact = () => {
                 </li>
               </ul>
             </div>
-            <div className="w-1/2">
+            <div className="w-1/2 map">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3321.2863904034393!2d72.97218297485138!3d33.649740479910086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38df9793f9cd6adb%3A0xc80413c445adc703!2sITSOLERA!5e0!3m2!1sen!2s!4v1725016067246!5m2!1sen!2s"
                 width="350"
@@ -112,6 +112,65 @@ const Contact = () => {
               transform: translateX(0);
             }
           }
+
+
+          @media only screen and (min-width: 320px) and (max-width : 450px){
+          
+          .contact1-div{
+            padding : 30px 20px;
+          }
+
+          .address{
+            width: 100%;
+          }
+
+          .contact1-h2{
+            font-size : 20px;
+          }
+
+          contact1-p{
+           font-size : 14px ;
+          }
+
+          .main-map{
+            padding: 30px;
+        } 
+          .map-details{
+            
+            display: flex;
+            flex-direction: column;
+            
+            }
+
+          .map{
+            width: 300px;
+            height: 200px;
+          }  
+        
+          
+
+          }
+
+          @media only screen and (min-width: 451px) and (max-width : 767px){
+          
+          .contact1-div{
+            padding : 30px 120px;
+          }
+
+          .address{
+            width: 100%;
+          }
+
+          .map-details{
+            display: flex;
+            flex-direction: column;
+            }
+          
+          }
+          
+
+
+
         `}
       </style>
     </>

@@ -63,7 +63,7 @@ function Home() {
         <MobileNavBar />*/}
 
         {/* HERO SECTION */}
-        <div
+        {/*        <div
           className="max-h-max bg-img"
           style={{
             backgroundImage:
@@ -118,16 +118,72 @@ function Home() {
             </div>
           </div>
         </div>
+*/}
 
-        <section className="mt-20">
+        <div
+          className="topper min-h-screen bg-cover bg-center"
+          style={{
+            backgroundImage:
+              'url("https://ezitech.org/wp-content/uploads/2024/02/111.jpg")',
+          }}
+        >
+          <div className="hero-section w-full h-full bg-[rgba(30,64,175,0.4)] ">
+            <HomeNavbar />
+            <hr className="border-t-1 border-white" />
+            <div className="text-center">
+              <h1 className="type-writer text-white lg:text-[48px] text-[40px] font-[700] xl:w-[80%] w-[90%] 2xl:w-[60%] mx-auto pt-32  text-center">
+                Welcome to the Drug Discovery AI System <br />
+                Characterized with <br className="md:hidden" />
+                <span className="type-words text-[#00CBFF] text-[48px] font-[700]">
+                  <Typewriter
+                    words={[
+                      " ML in Drug Discovery",
+                      " Virtual Screening",
+                      " Computational Chemistry",
+                      " Biomarker Discovery",
+                      " Pharmacovigilance",
+                    ]}
+                    loop={false}
+                    cursor
+                    cursorStyle="_"
+                    typeSpeed={70}
+                    deleteSpeed={50}
+                    delaySpeed={1000}
+                  />
+                </span>
+              </h1>
+              <p className="precision-text text-white text-lg sm:text-xl lg:text-2xl font-normal mt-5">
+                Driving Precision in Drug Discovery with AI!
+              </p>
+
+              <div className="w-full sm:w-3/4 lg:w-1/2 mx-auto mt-10 btn-div">
+                <button className="started-btn w-full sm:w-[150px] font-medium border px-6 py-3 text-white bg-[#00CBFF] border-[#00CBFF] rounded-md">
+                  <NavLink to="/drugdiscovery">Get Started </NavLink>
+                </button>
+              </div>
+              <div className="flex items-center justify-center mt-10 pb-14 text-white explore-div">
+                <p className="explore-text text-lg sm:text-xl font-normal">
+                  Explore our more useful thoughts
+                </p>
+                <div className="heart-icon flex items-center">
+                  <IoMdHeart className=" text-2xl" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* How it works */}
+
+        <section className="work-section mt-20">
           {/* HOW IT WORKS */}
-          <h1 className="text-[36px] font-[700] text-center mt-20 mb-[20px]">
+          <h1 className="work-h1 text-[36px] font-[700] text-center mt-20 mb-[20px]">
             How it works?
           </h1>
 
-          <div className="w-full flex pb-[30px]">
+          <div className="imgs-div w-full flex pb-[30px]">
             <div
-              className="w-[33%] flex justify-center flex-col flex-wrap content-center"
+              className="img-div1 w-[33%] flex justify-center flex-col flex-wrap content-center"
               style={{
                 animation: "slideInLeft 2s ease-out forwards",
               }}
@@ -142,13 +198,13 @@ function Home() {
               </h3>
             </div>
             <div
-              className="w-[33%] flex justify-center flex-col flex-wrap content-center"
+              className="img-div1 w-[33%] flex justify-center flex-col flex-wrap content-center"
               style={{
                 animation: "slideInTop 2s ease-out forwards",
               }}
             >
               <img
-                className="w-1/2"
+                className="w-1/2 img-div2-special"
                 src="https://mlo1gfdw4hud.i.optimole.com/w:auto/h:auto/q:mauto/https://dndi.org/wp-content/uploads/2020/01/DNDi-Homepage-Network-2021.svg"
                 alt="img"
               />
@@ -157,7 +213,7 @@ function Home() {
               </h3>
             </div>
             <div
-              className="w-[33%] flex justify-center flex-col flex-wrap content-center"
+              className="w-[33%] img-div1 flex justify-center flex-col flex-wrap content-center"
               style={{
                 animation: "slideInRight 2s ease-out forwards",
               }}
@@ -383,7 +439,7 @@ function Home() {
           className="sm:mt-15 my-20 relative "
           id="movingDiv"
         >
-          <div className="w-[90%] lg:w-[85%] xl:w-[80%] 2xl:w-[75%] mx-auto flex gap-10 justify-center lg:justify-between ">
+          <div className="revolution-div w-[90%] lg:w-[85%] xl:w-[80%] 2xl:w-[75%] mx-auto flex gap-10 justify-center lg:justify-between ">
             <div className=" flex flex-wrap content-center">
               <div
                 className=" sm:flex justify-center hidden  moving-div"
@@ -400,7 +456,7 @@ function Home() {
             </div>
 
             <div className="w-[80%] sm:w-[40%] sm:justify-self-end">
-              <h1 className="text-[#273044] text-center text-[35px] sm:text-[25px] md:text-[35px] xl:text-[36px] 2xl:text-[46px] font-[700] ">
+              <h1 className="revolution-h1 text-[#273044] text-center text-[35px] sm:text-[25px] md:text-[35px] xl:text-[36px] 2xl:text-[46px] font-[700] ">
                 Revolutionizing{" "}
                 <span className="text-[#2575ed]">Drug Discovery</span> with AI
                 and Explainable Models
@@ -469,6 +525,112 @@ function Home() {
     transform: translateY(0);
   }
 }
+
+@media only screen and (min-width: 320px) and (max-width : 450px){
+  .started-btn{
+     width : 150px;
+  }
+
+  .btn-div{
+    margin-top : 10px;
+  }
+
+  .topper{
+     min-height : 0;
+  }
+
+  .hero-section{
+     padding: 0px;
+  }
+
+  .type-writer{
+     font-size: 15px;
+     margin-top : 30px;
+  }
+
+  .type-words{
+     font-size : 15px;
+  }
+
+  .precision-text{
+    font-size : 15px;
+  }
+
+   .explore-text{
+    font-size : 15px;
+    margin-bottom : 30px;
+  }
+
+  .explore-div{
+  margin-top : 10px;
+     
+  }
+
+  .heart-icon{
+    display: none;
+  }
+
+  .work-section{
+    margin-top: 15px; 
+  }
+
+  .work-h1{
+    margin-top: 15px; 
+  }
+
+  .imgs-div{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap; 
+  }
+
+  .img-div1{
+    width : 100%;
+    padding : 20px
+  }
+
+  .img-div2-special{
+   padding-left: 20px;
+  }
+
+  .revolution-h1{
+     font-size : 22px;
+     text-align: justify;
+  }
+
+  .revolution-div{
+    gap : 0;
+  }
+
+
+
+
+}
+
+@media only screen and (min-width: 451px) and (max-width : 650px){
+  .started-btn{
+     width : 150px
+  }
+
+  .hero-section{
+     padding: 0px;
+  }
+
+  .type-writer{
+     font-size: 18px;
+  }
+
+  .type-words{
+     font-size : 18px;
+  }
+
+  .precision-text {
+    font-size : 18px;
+  }
+
+}
+
 
 
         `}

@@ -9,7 +9,7 @@ const PrivacyPolicy = () => {
     <>
       <Navbar />
       <div className="w-full">
-        <div className="w-full bg-[#dfdfdf] px-[24%] py-[30px]">
+        <div className="w-full privacy-section bg-[#dfdfdf] px-[24%] py-[30px]">
           <h2 className="text-left text-[24px] mb-[25px] mt-0 p-0 font-[800]">
             Our Privacy Policy
           </h2>
@@ -27,9 +27,9 @@ const PrivacyPolicy = () => {
           </p>
         </div>
 
-        <div className="w-full px-[30px] py-[10px] flex flex-col">
-          <div className="w-full flex">
-            <div className="w-1/2 p-2 flex justify-center">
+        <div className="w-full policy-div px-[30px] py-[10px] flex flex-col">
+          <div className="w-full flex policy-section">
+            <div className="w-1/2 p-2 policy-section1 flex justify-center">
               <p className=" p-5 w-[80%] text-justify">
                 At [ITSOLERA], we are committed to protecting your privacy. Any
                 personal information collected through our AI drug discovery
@@ -43,7 +43,7 @@ const PrivacyPolicy = () => {
                 responsibly and securely.
               </p>
             </div>
-            <div className="w-1/2 p-2 flex justify-center">
+            <div className="w-1/2 p-2 flex policy-section2 justify-center">
               <img
                 className="p-4 w-[80%]"
                 src="https://proschool.ai/static/media/Privacy-Policy-image.937ce7a886c63f55be1f.png"
@@ -54,6 +54,62 @@ const PrivacyPolicy = () => {
         </div>
       </div>
       <Footer />
+
+      {/* Add CSS keyframes for the animations */}
+      <style>
+        {`
+
+            @media only screen and (min-width: 320px) and (max-width : 450px){
+            
+            .privacy-section{
+               padding : 30px 50px;
+            }
+
+            .policy-div{
+            padding: 0px;
+            
+            }
+
+            .policy-section{
+              display: flex;
+              flex-direction : column ;
+              padding: 0px;
+            }
+
+            .policy-section1{
+              width : 100%;
+            }
+
+            .policy-section2{
+              width : 100%;
+            }
+            
+            }
+
+            @media only screen and (min-width: 451px) and (max-width : 767px){
+            
+            .privacy-section{
+               padding : 30px 50px;
+            }
+
+            .policy-section{
+              display: flex;
+              flex-direction : column ;
+              padding: 0px;
+            }
+
+            .policy-section1{
+              width : 100%;
+            }
+
+            .policy-section2{
+              width : 100%;
+            }
+            
+            }
+         
+       `}
+      </style>
     </>
   );
 };

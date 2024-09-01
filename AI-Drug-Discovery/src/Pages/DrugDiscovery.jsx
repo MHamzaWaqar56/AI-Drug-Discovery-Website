@@ -22,7 +22,7 @@ const DrugDiscovery = () => {
         }}
       >
         <div
-          className="flex w-full flex-col px-[300px] justify-center"
+          className="flex drug-discovery w-full flex-col px-[300px] justify-center"
           style={{
             position: "absolute",
             top: 0,
@@ -34,7 +34,7 @@ const DrugDiscovery = () => {
           }}
         >
           <h2
-            className="text-[#2575ed] text-left mb-[20px] font-[700] text-[22px]"
+            className="text-[#2575ed] drug-h2 text-left mb-[20px] font-[700] text-[22px]"
             style={{
               animation: "slideInLeft 2s ease-out forwards",
             }}
@@ -42,7 +42,7 @@ const DrugDiscovery = () => {
             Predictive insights and groundbreaking intelligence for drug{" "}
           </h2>
           <p
-            className="text-white text-[20px] text-left"
+            className="text-white drug-p text-[20px] text-left"
             style={{
               animation: "slideInRight 2s ease-out forwards",
             }}
@@ -64,30 +64,30 @@ const DrugDiscovery = () => {
         </div>
 
         <div className="w-full flex justify-center">
-          <div className="w-1/2 bg-[#e0e3e7] rounded-md">
+          <div className="w-1/2 drug-form bg-[#e0e3e7] rounded-md">
             <br /> <br />
             <input
               type="text"
               className="w-[80%] border-black border-[1px] focus:outline-none focus:border-[#e0e3e7] py-2 px-4"
-              placeholder="input 1"
+              placeholder="Smiles"
             />
             <br /> <br />
             <input
               type="text"
               className="w-[80%] border-black border-[1px] focus:outline-none focus:border-[#e0e3e7] py-2 px-4"
-              placeholder="input 2"
+              placeholder="Target Sequence"
             />
             <br /> <br />
             <input
               type="text"
               className="w-[80%] border-black border-[1px] focus:outline-none focus:border-[#e0e3e7] py-2 px-4"
-              placeholder="input 3"
+              placeholder="Mechanism of Action"
             />
             <br /> <br />
             <input
               type="text"
               className="w-[80%] border-black border-[1px] focus:outline-none focus:border-[#e0e3e7] py-2 px-4"
-              placeholder="input 4"
+              placeholder="Action Type"
             />
             <br /> <br />
             <button className="px-[10px] py-[5px] text-[20px] font-[600] border-[1px] border-black hover:bg-[#2575ed] hover:text-white hover:border-[#2575ed] ">
@@ -127,6 +127,56 @@ const DrugDiscovery = () => {
               transform: translateX(0);
             }
           }
+
+
+          @media only screen and (min-width: 320px) and (max-width : 450px){
+          .drug-discovery{
+            padding: 50px;
+          }
+
+          .drug-h2{
+            font-size : 18px
+          }
+
+          .drug-p{
+            display: none;
+          }
+
+          .drug-form{
+           width: 80%; 
+          }
+
+        }
+
+         @media only screen and (min-width: 451px) and (max-width : 767px){
+          .drug-discovery{
+            padding: 50px 100px ;
+          }
+
+          .drug-h2{
+            font-size : 20px
+          }
+
+        .drug-form{
+           width: 80%; 
+          }
+
+         .drug-p{
+            display: none;
+            
+          }
+
+        }
+
+         @media only screen and (min-width: 768px) and (max-width : 1024px){
+          .drug-discovery{
+            padding: 50px 100px ;
+          }
+
+        }
+
+
+
         `}
       </style>
     </>
