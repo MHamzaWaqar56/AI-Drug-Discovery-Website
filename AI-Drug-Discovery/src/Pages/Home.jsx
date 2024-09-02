@@ -255,10 +255,10 @@ function Home() {
 
                 <div className="flex flex-wrap items-center gap-3 mt-3">
                   <div className="flex items-center gap-3">
-                    <h2>
+                    <p className="card-data">
                       Utilized Advanced machine learning algorithm to discovery
                       of drugs.
-                    </h2>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -287,7 +287,7 @@ function Home() {
 
                 <div className="flex flex-wrap items-center gap-3 mt-3">
                   <div className="flex items-center gap-3">
-                    <p>
+                    <p className="card-data">
                       A process where AI models are used to screen vast
                       libraries of compounds to identify potential drug
                       candidates efficiently.
@@ -319,11 +319,11 @@ function Home() {
 
                 <div className="flex flex-wrap items-center gap-3 mt-3">
                   <div className="flex items-center gap-3">
-                    <h2>
+                    <p className="card-data">
                       Involves the use of computer simulations and models,
                       driven by AI, to predict the behavior and interaction of
                       molecules in drug discovery.
-                    </h2>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -351,11 +351,11 @@ function Home() {
 
                 <div className="flex flex-wrap items-center gap-3 mt-3">
                   <div className="flex items-center gap-3">
-                    <h2>
+                    <p className="card-data">
                       AI technologies are used to identify biomarkers that can
                       predict the effectiveness or safety of a drug,
                       accelerating personalized medicine.
-                    </h2>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -384,11 +384,11 @@ function Home() {
 
                 <div className="flex flex-wrap items-center gap-3 mt-3">
                   <div className="flex items-center gap-3">
-                    <h2>
+                    <p className="card-data">
                       AI is applied in monitoring and analyzing data on drug
                       side effects and safety, improving post-market
                       surveillance of drugs.
-                    </h2>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -417,11 +417,11 @@ function Home() {
 
                 <div className="flex flex-wrap items-center gap-3 mt-3">
                   <div className="flex items-center gap-3">
-                    <h2>
+                    <p className="card-data">
                       Refers to the application of machine learning algorithms
                       to predict drug-target interactions, optimize compounds,
                       and analyze large datasets in drug research.
-                    </h2>
+                    </p>
                   </div>
                 </div>
               </div>
@@ -526,9 +526,25 @@ function Home() {
   }
 }
 
+@media only screen and (min-width: 320px) and (max-width : 364px){
+   .type-writer{
+     font-size: 15px;
+     margin-top : 30px;
+     margin-left: 0px;
+     margin-right: 0px;
+     width: 100%; 
+  }
+}
+
+
 @media only screen and (min-width: 320px) and (max-width : 450px){
   .started-btn{
      width : 150px;
+  }
+
+  .card-data{
+     text-align : justify;
+     font-size : 15px;
   }
 
   .btn-div{
@@ -587,7 +603,9 @@ function Home() {
 
   .img-div1{
     width : 100%;
-    padding : 20px
+    padding : 20px;
+    display: flex;
+    align-items : center; 
   }
 
   .img-div2-special{

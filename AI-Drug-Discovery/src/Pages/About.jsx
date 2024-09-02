@@ -14,7 +14,7 @@ const About = () => {
       >
         <h3 className="text-[36px] font-[700] pt-[20px]">Our Mission</h3>
 
-        <p className="text-[16px] pb-[10px]">
+        <p className="text-[16px] pb-[10px] about-epsilon">
           ML Team Epsilon Dedicated to develop AI Drug Discovery
         </p>
       </div>
@@ -25,7 +25,7 @@ const About = () => {
             animation: "slideInLeft 2s ease-out forwards",
           }}
         >
-          <p className=" p-5 w-[80%] text-justify">
+          <p className=" p-5 w-[80%] text-[20px] text-justify epsilon-text">
             At Team Epsilon , Our mission is to revolutionize drug discovery by
             harnessing the power of Artificial Intelligence (AI) to accelerate
             the development of safer, more effective therapies. We are dedicated
@@ -87,10 +87,32 @@ const About = () => {
   }
 }
 
+
+@media only screen and (min-width: 320px) and (max-width : 450px){
+
+.about-epsilon{
+  font-size : 10px !important;
+}
+
+.epsilon-text{
+  font-size : 12px !important;
+}
+
+}
+
+
 @media only screen and (min-width: 320px) and (max-width : 850px){
 
 .about-img{
 display: none;
+}
+
+.about-epsilon{
+  font-size : 12px;
+}
+
+.epsilon-text{
+  font-size : 14px;
 }
 
 .about-para{
@@ -99,6 +121,13 @@ width: 100%;
 
 }
 
+@media only screen and (min-width: 851px) and (max-width : 990px){
+
+ .epsilon-text{
+  font-size : 14px;
+ }
+
+}
 
         `}
       </style>

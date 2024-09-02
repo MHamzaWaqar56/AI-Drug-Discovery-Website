@@ -110,7 +110,7 @@ const Footer = () => {
           style={{ fontFamily: "cursive" }}
         >
           <NavLink to="/">
-            AI Drug <br className="hidden sm:block" />
+            AI Drug <br />
             Discovery
           </NavLink>
         </h2>
@@ -189,6 +189,16 @@ const Footer = () => {
 
       <style>
         {`
+
+           @media only screen and (min-width: 320px) and (max-width : 380px){
+           
+           .copyright{
+           font-size : 8px !important;
+          }
+
+           }
+
+
           @media only screen and (min-width: 320px) and (max-width : 640px){
             .footer-center{
              width: 100%;

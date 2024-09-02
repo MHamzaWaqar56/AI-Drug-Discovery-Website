@@ -2,8 +2,23 @@ import Navbar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 import backgroundImage from "../Images/AI DD 5.jpg";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 const DrugDiscovery = () => {
+  const [smiles, setSmiles] = useState("");
+  const [targetSequence, setTargetSequence] = useState("");
+  const [mechanism, setMechanism] = useState("");
+  const [actionType, setActionType] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    setSmiles("");
+    setTargetSequence("");
+    setMechanism("");
+    setActionType("");
+  };
+
   return (
     <>
       <Navbar />
@@ -68,29 +83,40 @@ const DrugDiscovery = () => {
             <br /> <br />
             <input
               type="text"
+              value={smiles}
+              onChange={(e) => setSmiles(e.target.value)}
               className="w-[80%] border-black border-[1px] focus:outline-none focus:border-[#e0e3e7] py-2 px-4"
               placeholder="Smiles"
             />
             <br /> <br />
             <input
               type="text"
+              value={targetSequence}
+              onChange={(e) => setTargetSequence(e.target.value)}
               className="w-[80%] border-black border-[1px] focus:outline-none focus:border-[#e0e3e7] py-2 px-4"
               placeholder="Target Sequence"
             />
             <br /> <br />
             <input
               type="text"
+              value={mechanism}
+              onChange={(e) => setMechanism(e.target.value)}
               className="w-[80%] border-black border-[1px] focus:outline-none focus:border-[#e0e3e7] py-2 px-4"
               placeholder="Mechanism of Action"
             />
             <br /> <br />
             <input
               type="text"
+              value={actionType}
+              onChange={(e) => setActionType(e.target.value)}
               className="w-[80%] border-black border-[1px] focus:outline-none focus:border-[#e0e3e7] py-2 px-4"
               placeholder="Action Type"
             />
             <br /> <br />
-            <button className="px-[10px] py-[5px] text-[20px] font-[600] border-[1px] border-black hover:bg-[#2575ed] hover:text-white hover:border-[#2575ed] ">
+            <button
+              className="px-[10px] py-[5px] text-[20px] font-[600] border-[1px] border-black hover:bg-[#2575ed] hover:text-white hover:border-[#2575ed] "
+              onClick={handleSubmit}
+            >
               Submit
             </button>
             <br />
@@ -136,7 +162,14 @@ const DrugDiscovery = () => {
 
           .drug-h2{
             font-size : 18px
+
           }
+
+          .drug-h2:hover{
+            color : white;
+
+          }
+
 
           .drug-p{
             display: none;

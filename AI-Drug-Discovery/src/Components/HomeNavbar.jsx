@@ -114,7 +114,7 @@ function HomeNavbar() {
           </ul>
         </div>
 
-        <div className="hidden lg:block w-[20%] flex justify-center">
+        <div className="hidden lg:block w-[20%] ">
           <p className="flex justify-center font-[600] rounded-md border-[1px] px-[10px] py-[15px] text-white hover:bg-[#00CBFF] hover:border-[#00CBFF]">
             ML Team Epsilon
           </p>

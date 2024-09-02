@@ -113,6 +113,18 @@ const Contact = () => {
             }
           }
 
+          @media only screen and (min-width: 320px) and (max-width : 400px){
+          
+          .contact1-h2{
+            font-size : 18px !important;
+          }
+
+          .contact1-p{
+           font-size : 12px !important ;
+          }
+
+          }
+
 
           @media only screen and (min-width: 320px) and (max-width : 450px){
           
